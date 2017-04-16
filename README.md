@@ -2,6 +2,5 @@
 
 ## Results
 
-* Model: Basic CNN
-
+* Model: Basic CNN <br />
 Test accuracy: 80%
