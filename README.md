@@ -29,12 +29,12 @@ Total number of images are 17400.
 I have experimented with the following models:
 
 1. **Basic CNN**: This model consists of the following layers:
-  * Layer 1: A convolution layer with kernel size: 5 x 5 x 32.
-  * Layer 2: A max-pooling layer with downscale factor of 2.
-  * Layer 3: A convolution layer with kernel size: 5 x 5 x 64.
-  * Layer 4: A max-pooling layer with downscale factor of 2.
-  * Layer 5: A dense layer with 1024 hidden units.
-  * Layer 6: Soft-max layer with 3 nodes (i.e. the number of classes).
+    * Layer 1: A convolution layer with kernel size: 5 x 5 x 32.
+    * Layer 2: A max-pooling layer with downscale factor of 2.
+    * Layer 3: A convolution layer with kernel size: 5 x 5 x 64.
+    * Layer 4: A max-pooling layer with downscale factor of 2.
+    * Layer 5: A dense layer with 1024 hidden units.
+    * Layer 6: Soft-max layer with 3 nodes (i.e. the number of classes).
   
 ## Results
 
