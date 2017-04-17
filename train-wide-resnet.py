@@ -1,3 +1,11 @@
+#!/usr/bin/env python2
+# -*- coding: utf-8 -*-
+"""
+Created on Sun Apr 16 20:01:32 2017
+
+@author: pratik18v
+"""
+
 from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
@@ -16,68 +24,93 @@ import pickle
 from progressbar import ProgressBar
 import numpy as np
 
-def deepnn(x):
-    """deepnn builds the graph for a deep net for classifying our images.
-    Args:
-    x: an input tensor with the dimensions (N_examples, 12288), where 12288 is the
-    number of pixels in an image.
-    Returns:
-    A tuple (y, keep_prob). y is a tensor of shape (N_examples, 3), with values
-    equal to the logits of classifying the digit into one of 3 classes (the
-    digits 0-2). keep_prob is a scalar placeholder for the probability of
-    dropout.
-    """
+def wide_resnet(x, n=2, k=1):
+
+    n_filters = {0:16, 1:16*k, 2:32*k, 3:64*k}
     # Reshape to use within a convolutional neural net.
     # Last dimension is for "features" - there is only one here, since images are
     # grayscale -- it would be 3 for an RGB image, 4 for RGBA, etc.
-    x_image = tf.reshape(x, [-1, 64, 64, 3])
+    l_in = tf.reshape(x, [-1, 32, 32, 3])
 
-    # First convolutional layer - maps one grayscale image to 32 feature maps.
-    W_conv1 = weight_variable([5, 5, 3, 32])
-    b_conv1 = bias_variable([32])
-    h_conv1 = tf.nn.relu(conv2d(x_image, W_conv1) + b_conv1)
+    # output size: 32x32x16
+    W_conv1 = weight_variable([3, 3, 3, 16])
+    b_conv1 = bias_variable([16])
+    l = tf.contrib.layers.batch_norm(conv2d(l_in, W_conv1) + b_conv1)
 
-    # Pooling layer - downsamples by 2X.
-    h_pool1 = max_pool_2x2(h_conv1)
-
-    # Second convolutional layer -- maps 32 feature maps to 64.
-    W_conv2 = weight_variable([5, 5, 32, 64])
-    b_conv2 = bias_variable([64])
-    h_conv2 = tf.nn.relu(conv2d(h_pool1, W_conv2) + b_conv2)
-
-    # Second pooling layer.
-    h_pool2 = max_pool_2x2(h_conv2)
-
-    # Fully connected layer 1 -- after 2 round of downsampling, our 64x64 image
-    # is down to 16x16x64 feature maps -- maps this to 1024 features.
-    W_fc1 = weight_variable([16 * 16 * 64, 1024])
-    b_fc1 = bias_variable([1024])
-
-    h_pool2_flat = tf.reshape(h_pool2, [-1, 16*16*64])
-    h_fc1 = tf.nn.relu(tf.matmul(h_pool2_flat, W_fc1) + b_fc1)
-
-    # Dropout - controls the complexity of the model, prevents co-adaptation of
-    # features.
     keep_prob = tf.placeholder(tf.float32)
-    h_fc1_drop = tf.nn.dropout(h_fc1, keep_prob)
+    
+    # output size: 32x32x16
+    l = residual_block(l, keep_prob, first=True, filters=n_filters[1])
+    for _ in range(1,n):
+        l = residual_block(l, keep_prob, filters=n_filters[1])
 
-    # Map the 1024 features to 3 classes, one for each digit
-    W_fc2 = weight_variable([1024, 3])
-    b_fc2 = bias_variable([3])
+    # output size: 16x16x32    
+    l = residual_block(l, keep_prob, increase_dim=True, filters=n_filters[2])
+    for _ in range(1,n+2):
+        l = residual_block(l, keep_prob, filters=n_filters[2])
 
-    y_conv = tf.matmul(h_fc1_drop, W_fc2) + b_fc2
+    # output size: 8x8x64
+    l = residual_block(l, keep_prob, increase_dim=True, filters=n_filters[3])
+    for _ in range(1,n+2):
+        l = residual_block(l, keep_prob, filters=n_filters[3])
 
-    return y_conv, keep_prob
+    bn_post_conv = tf.contrib.layers.batch_norm(l)
+    bn_post_relu = tf.nn.relu(bn_post_conv)
 
-def conv2d(x, W):
+    # average pooling
+    avg_pool = tf.nn.avg_pool(bn_post_relu, ksize=[1, 8, 8, 1], strides=[1, 1, 1, 1], padding='SAME')
+
+    W_fc = weight_variable([8 * 8 * 64, 3])
+    b_fc = bias_variable([3])
+
+    avg_pool_flat = tf.reshape(avg_pool, [-1, 8 * 8 * 64])
+    h_fc = tf.matmul(avg_pool_flat, W_fc) + b_fc
+
+    return h_fc, keep_prob
+
+def residual_block(l, keep_prob=0.5, increase_dim=False, projection=True, first=False, filters=16):
+    input_num_filters = l.get_shape().as_list()[3]
+    if increase_dim:
+        first_stride = [1, 2, 2, 1]
+    else:
+        first_stride = [1, 1, 1, 1]
+
+    if first:
+        # hacky solution to keep layers correct
+        bn_pre_relu = l
+    else:
+        # contains the BN -> ReLU portion, steps 1 to 2
+        bn_pre_conv = tf.contrib.layers.batch_norm(l)
+        bn_pre_relu = tf.nn.relu(bn_pre_conv)
+    # contains the weight -> BN -> ReLU portion, steps 3 to 5
+    W_conv1 = weight_variable([3, 3, input_num_filters, filters])
+    b_conv1 = bias_variable([filters])
+    conv_1 = tf.nn.relu(tf.contrib.layers.batch_norm(conv2d(bn_pre_relu, W_conv1, first_stride) + b_conv1))
+    dropout = tf.nn.dropout(conv_1, keep_prob)
+    # contains the last weight portion, step 6
+    W_conv2 = weight_variable([3, 3, filters, filters])
+    b_conv2 = bias_variable([filters])
+    conv_2 = conv2d(dropout, W_conv2) + b_conv2
+    # add shortcut connections
+    if increase_dim:
+        # projection shortcut, as option B in paper
+        W_conv3 = weight_variable([1, 1, input_num_filters, filters])
+        projection = conv2d(l, W_conv3, [1, 2, 2, 1])
+        block = tf.add(conv_2, projection)
+        
+    elif first:
+        W_conv3 = weight_variable([1, 1, input_num_filters, filters])
+        projection = conv2d(l, W_conv3)
+        block = tf.add(conv_2, projection)
+        
+    else:
+        block = tf.add(conv_2, l)
+
+    return block
+    
+def conv2d(x, W, stride = [1, 1, 1, 1]):
     """conv2d returns a 2d convolution layer with full stride."""
-    return tf.nn.conv2d(x, W, strides=[1, 1, 1, 1], padding='SAME')
-
-
-def max_pool_2x2(x):
-    """max_pool_2x2 downsamples a feature map by 2X."""
-    return tf.nn.max_pool(x, ksize=[1, 2, 2, 1],
-                        strides=[1, 2, 2, 1], padding='SAME')
+    return tf.nn.conv2d(x, W, strides=stride, padding='SAME')
 
 
 def weight_variable(shape):
@@ -94,7 +127,7 @@ def bias_variable(shape):
 
 def generate_data(folder):
 
-    pixel = 64
+    pixel = 32
     if os.path.isfile('training-data.pkl') == False:
         imgnames = []
         for fname in glob.glob(folder+'*.jpg'):
@@ -221,7 +254,7 @@ def generate_batch(X, y, batch_size):
 
 def main(_):
     
-    num_pixels = 64*64*3 #32*32*3
+    num_pixels = 32*32*3 #32*32*3
     
     #Loading data
     trainX, trainY, testX, testY = generate_data(FLAGS.data_dir)
@@ -233,7 +266,7 @@ def main(_):
     y_ = tf.placeholder(tf.float32, [None, FLAGS.classes])
     
     # Build the graph for the deep net
-    y_conv, keep_prob = deepnn(x)
+    y_conv, keep_prob = wide_resnet(x)
     
     cross_entropy = tf.reduce_mean(
       tf.nn.softmax_cross_entropy_with_logits(labels=y_, logits=y_conv))
@@ -269,7 +302,7 @@ if __name__ == '__main__':
                       help='Number of steps to run trainer.')
     parser.add_argument('--learning_rate', type=float, default=0.001,
                       help='Initial learning rate')
-    parser.add_argument('--dropout_prob', type=float, default=0.5,
+    parser.add_argument('--dropout_prob', type=float, default=0.3,
                       help='Probability to drop units in dropout')
     
     FLAGS, unparsed = parser.parse_known_args()
