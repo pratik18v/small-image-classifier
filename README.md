@@ -36,7 +36,7 @@ I have experimented with the following models:
     * Layer 5: A dense layer with 1024 hidden units.
     * Layer 6: Soft-max layer with 3 nodes (i.e. the number of classes).
     
-2. **Wide Residual Network**: The exact details of this architecture are described in the paper ([Link](https://arxiv.org/pdf/1605.07146.pdf))
+2. **Wide Residual Network**: The exact details of this architecture are described in the paper ([Link](https://arxiv.org/pdf/1605.07146.pdf)).
 
 ## Results
 Image size used: 32 x 32 x 3 <br />
