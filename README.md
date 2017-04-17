@@ -50,7 +50,7 @@ Test accuracy: 80%
 
 * __Model: Wide Residual Network__ <br />
 Network width, k: 1 <br />
-Units per Residual Block, n:2 <br />
+Units per Residual Block, n: 2 <br />
 Batch size: 50 <br />
 Optimizer: Adam, Learning rate: 0.01 <br />
 Iterations: 50,000 <br />
@@ -59,7 +59,7 @@ Test accuracy: 90%
 
 * __Model: Wide Residual Network__ <br />
 Network width, k: 1 <br />
-Units per Residual Block, n:3 <br />
+Units per Residual Block, n: 3 <br />
 Batch size: 50 <br />
 Optimizer: Adam, Learning rate: 0.01 <br />
 Iterations: 50,000 <br />
