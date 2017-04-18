@@ -49,9 +49,9 @@ Drop-out probability: 0.5 (training), 1.0 (testing) <br />
 Test accuracy: 80%
 
 * **Model: Wide Residual Network** <br />
-| S.R. No. | N/w Width (k) | Units per block (n) | Optimizer/Learning Rate | Iterations | Dropout Prob | Test Acc |
-|----------|---------------|---------------------|-------------------------|------------|--------------|----------|
-|    1     |       1       |         2           |        Adam/0.01        |   50000    |     0.5      |    90    |
-|    2     |       1       |         3           |        Adam/0.01        |   50000    |     0.5      |    93    |
-|    3     |       2       |         2           |        Adam/0.01        |   50000    |     0.5      |  **94**  |
-|    4     |       2       |         3           |        Adam/0.01        |   50000    |     0.5      |   93.8   |
+ S.R. No. | N/w Width (k) | Units per block (n) | Optimizer/Learning Rate | Iterations | Dropout Prob | Test Acc 
+----------|---------------|---------------------|-------------------------|------------|--------------|----------
+    1     |       1       |         2           |        Adam/0.01        |   50000    |     0.5      |    90    
+    2     |       1       |         3           |        Adam/0.01        |   50000    |     0.5      |    93    
+    3     |       2       |         2           |        Adam/0.01        |   50000    |     0.5      |  **94**  
+    4     |       2       |         3           |        Adam/0.01        |   50000    |     0.5      |   93.8   
