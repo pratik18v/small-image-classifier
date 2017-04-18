@@ -51,7 +51,7 @@ Test accuracy: 80%
 * **Model: Wide Residual Network** <br />
    * Network width, k: 1 <br />
    Units per Residual Block, n: 2 <br />
-   Batch size: 50 <br />
+   Batch size: 100 <br />
    Optimizer: Adam, Learning rate: 0.01 <br />
    Iterations: 50,000 <br />
    Drop-out probability: 0.3 (training), 1.0 (testing) <br />
@@ -59,8 +59,24 @@ Test accuracy: 80%
 
    * Network width, k: 1 <br />
    Units per Residual Block, n: 3 <br />
+   Batch size: 100 <br />
+   Optimizer: Adam, Learning rate: 0.01 <br />
+   Iterations: 50,000 <br />
+   Drop-out probability: 0.5 (training), 1.0 (testing) <br />
+   Test accuracy: 93%
+   
+   * Network width, k: 2 <br />
+   Units per Residual Block, n: 2 <br />
+   Batch size: 100 <br />
+   Optimizer: Adam, Learning rate: 0.01 <br />
+   Iterations: 50,000 <br />
+   Drop-out probability: 0.5 (training), 1.0 (testing) <br />
+   Test accuracy: **94%**
+   
+   * Network width, k: 2 <br />
+   Units per Residual Block, n: 3 <br />
    Batch size: 50 <br />
    Optimizer: Adam, Learning rate: 0.01 <br />
    Iterations: 50,000 <br />
    Drop-out probability: 0.5 (training), 1.0 (testing) <br />
-   Test accuracy: **93%**
+   Test accuracy: 93.8%
