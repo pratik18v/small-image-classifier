@@ -1,0 +1,620 @@
+I tensorflow/stream_executor/dso_loader.cc:135] successfully opened CUDA library libcublas.so.8.0 locally
+I tensorflow/stream_executor/dso_loader.cc:135] successfully opened CUDA library libcudnn.so.5 locally
+I tensorflow/stream_executor/dso_loader.cc:135] successfully opened CUDA library libcufft.so.8.0 locally
+I tensorflow/stream_executor/dso_loader.cc:135] successfully opened CUDA library libcuda.so.1 locally
+I tensorflow/stream_executor/dso_loader.cc:135] successfully opened CUDA library libcurand.so.8.0 locally
+W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE3 instructions, but these are available on your machine and could speed up CPU computations.
+W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX2 instructions, but these are available on your machine and could speed up CPU computations.
+W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use FMA instructions, but these are available on your machine and could speed up CPU computations.
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 0 with properties: 
+name: GeForce GTX TITAN X
+major: 5 minor: 2 memoryClockRate (GHz) 1.076
+pciBusID 0000:09:00.0
+Total memory: 11.92GiB
+Free memory: 3.48GiB
+W tensorflow/stream_executor/cuda/cuda_driver.cc:590] creating context when one is currently active; existing: 0x5f41060
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 1 with properties: 
+name: GeForce GTX 970
+major: 5 minor: 2 memoryClockRate (GHz) 1.3165
+pciBusID 0000:0a:00.0
+Total memory: 3.94GiB
+Free memory: 3.88GiB
+W tensorflow/stream_executor/cuda/cuda_driver.cc:590] creating context when one is currently active; existing: 0x5f3d240
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 2 with properties: 
+name: GeForce GTX TITAN X
+major: 5 minor: 2 memoryClockRate (GHz) 1.076
+pciBusID 0000:06:00.0
+Total memory: 11.92GiB
+Free memory: 3.57GiB
+W tensorflow/stream_executor/cuda/cuda_driver.cc:590] creating context when one is currently active; existing: 0x5f44e80
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 3 with properties: 
+name: GeForce GTX TITAN X
+major: 5 minor: 2 memoryClockRate (GHz) 1.076
+pciBusID 0000:05:00.0
+Total memory: 11.92GiB
+Free memory: 3.58GiB
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 0 and 1
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 1 and 0
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 1 and 2
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 1 and 3
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 2 and 1
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 3 and 1
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:906] DMA: 0 1 2 3 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 0:   Y N Y Y 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 1:   N Y N N 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 2:   Y N Y Y 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 3:   Y N Y Y 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: GeForce GTX TITAN X, pci bus id: 0000:09:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:1) -> (device: 1, name: GeForce GTX 970, pci bus id: 0000:0a:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:2) -> (device: 2, name: GeForce GTX TITAN X, pci bus id: 0000:06:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:3) -> (device: 3, name: GeForce GTX TITAN X, pci bus id: 0000:05:00.0)
+W tensorflow/core/common_runtime/bfc_allocator.cc:217] Ran out of memory trying to allocate 2.39GiB. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory is available.
+W tensorflow/core/common_runtime/bfc_allocator.cc:217] Ran out of memory trying to allocate 1.69GiB. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory is available.
+W tensorflow/core/common_runtime/bfc_allocator.cc:217] Ran out of memory trying to allocate 2.26GiB. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory is available.
+W tensorflow/core/common_runtime/bfc_allocator.cc:217] Ran out of memory trying to allocate 1.19GiB. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory is available.
+W tensorflow/core/common_runtime/bfc_allocator.cc:217] Ran out of memory trying to allocate 2.39GiB. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory is available.
+W tensorflow/core/common_runtime/bfc_allocator.cc:217] Ran out of memory trying to allocate 2.29GiB. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory is available.
+W tensorflow/core/common_runtime/bfc_allocator.cc:217] Ran out of memory trying to allocate 2.27GiB. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory is available.
+I tensorflow/core/common_runtime/gpu/pool_allocator.cc:247] PoolAllocator: After 2306 get requests, put_count=2144 evicted_count=1000 eviction_rate=0.466418 and unsatisfied allocation rate=0.547268
+I tensorflow/core/common_runtime/gpu/pool_allocator.cc:259] Raising pool_size_limit_ from 100 to 110
+I tensorflow/core/common_runtime/gpu/pool_allocator.cc:247] PoolAllocator: After 9916 get requests, put_count=9944 evicted_count=1000 eviction_rate=0.100563 and unsatisfied allocation rate=0.100343
+I tensorflow/core/common_runtime/gpu/pool_allocator.cc:259] Raising pool_size_limit_ from 256 to 281
+Number of images in class-1: 5364
+Number of images in class-2: 6792
+Number of images in class-3: 5244
+Size of training set: 13050
+Size of test set: 4350
+step 0, training accuracy 0.32
+test accuracy 0.344828
+step 100, training accuracy 0.44
+step 200, training accuracy 0.53
+step 300, training accuracy 0.52
+step 400, training accuracy 0.54
+step 500, training accuracy 0.56
+step 600, training accuracy 0.64
+step 700, training accuracy 0.63
+step 800, training accuracy 0.63
+step 900, training accuracy 0.67
+step 1000, training accuracy 0.65
+test accuracy 0.637471
+step 1100, training accuracy 0.72
+step 1200, training accuracy 0.76
+step 1300, training accuracy 0.74
+step 1400, training accuracy 0.62
+step 1500, training accuracy 0.63
+step 1600, training accuracy 0.74
+step 1700, training accuracy 0.75
+step 1800, training accuracy 0.74
+step 1900, training accuracy 0.81
+step 2000, training accuracy 0.76
+test accuracy 0.722299
+step 2100, training accuracy 0.78
+step 2200, training accuracy 0.8
+step 2300, training accuracy 0.73
+step 2400, training accuracy 0.89
+step 2500, training accuracy 0.89
+step 2600, training accuracy 0.9
+step 2700, training accuracy 0.91
+step 2800, training accuracy 0.86
+step 2900, training accuracy 0.91
+step 3000, training accuracy 0.88
+test accuracy 0.783908
+step 3100, training accuracy 0.92
+step 3200, training accuracy 0.85
+step 3300, training accuracy 0.89
+step 3400, training accuracy 0.88
+step 3500, training accuracy 0.9
+step 3600, training accuracy 0.94
+step 3700, training accuracy 0.95
+step 3800, training accuracy 0.95
+step 3900, training accuracy 0.99
+step 4000, training accuracy 0.93
+test accuracy 0.835402
+step 4100, training accuracy 0.96
+step 4200, training accuracy 0.99
+step 4300, training accuracy 0.96
+step 4400, training accuracy 0.98
+step 4500, training accuracy 1
+step 4600, training accuracy 0.96
+step 4700, training accuracy 1
+step 4800, training accuracy 0.97
+step 4900, training accuracy 0.99
+step 5000, training accuracy 0.99
+test accuracy 0.862069
+step 5100, training accuracy 0.97
+step 5200, training accuracy 0.99
+step 5300, training accuracy 1
+step 5400, training accuracy 0.98
+step 5500, training accuracy 1
+step 5600, training accuracy 1
+step 5700, training accuracy 1
+step 5800, training accuracy 0.99
+step 5900, training accuracy 0.99
+step 6000, training accuracy 0.99
+test accuracy 0.886897
+step 6100, training accuracy 0.99
+step 6200, training accuracy 0.99
+step 6300, training accuracy 0.98
+step 6400, training accuracy 1
+step 6500, training accuracy 1
+step 6600, training accuracy 1
+step 6700, training accuracy 1
+step 6800, training accuracy 0.97
+step 6900, training accuracy 1
+step 7000, training accuracy 1
+test accuracy 0.889425
+step 7100, training accuracy 1
+step 7200, training accuracy 1
+step 7300, training accuracy 1
+step 7400, training accuracy 0.99
+step 7500, training accuracy 1
+step 7600, training accuracy 1
+step 7700, training accuracy 1
+step 7800, training accuracy 1
+step 7900, training accuracy 1
+step 8000, training accuracy 1
+test accuracy 0.906207
+step 8100, training accuracy 1
+step 8200, training accuracy 1
+step 8300, training accuracy 1
+step 8400, training accuracy 1
+step 8500, training accuracy 1
+step 8600, training accuracy 0.99
+step 8700, training accuracy 1
+step 8800, training accuracy 0.99
+step 8900, training accuracy 1
+step 9000, training accuracy 1
+test accuracy 0.90046
+step 9100, training accuracy 1
+step 9200, training accuracy 1
+step 9300, training accuracy 1
+step 9400, training accuracy 1
+step 9500, training accuracy 1
+step 9600, training accuracy 0.99
+step 9700, training accuracy 1
+step 9800, training accuracy 1
+step 9900, training accuracy 0.99
+step 10000, training accuracy 1
+test accuracy 0.910575
+step 10100, training accuracy 1
+step 10200, training accuracy 1
+step 10300, training accuracy 1
+step 10400, training accuracy 1
+step 10500, training accuracy 1
+step 10600, training accuracy 1
+step 10700, training accuracy 1
+step 10800, training accuracy 1
+step 10900, training accuracy 1
+step 11000, training accuracy 1
+test accuracy 0.914943
+step 11100, training accuracy 1
+step 11200, training accuracy 1
+step 11300, training accuracy 1
+step 11400, training accuracy 1
+step 11500, training accuracy 1
+step 11600, training accuracy 1
+step 11700, training accuracy 1
+step 11800, training accuracy 1
+step 11900, training accuracy 1
+step 12000, training accuracy 1
+test accuracy 0.910115
+step 12100, training accuracy 1
+step 12200, training accuracy 0.99
+step 12300, training accuracy 1
+step 12400, training accuracy 1
+step 12500, training accuracy 1
+step 12600, training accuracy 1
+step 12700, training accuracy 1
+step 12800, training accuracy 1
+step 12900, training accuracy 1
+step 13000, training accuracy 1
+test accuracy 0.893563
+step 13100, training accuracy 1
+step 13200, training accuracy 1
+step 13300, training accuracy 1
+step 13400, training accuracy 1
+step 13500, training accuracy 0.99
+step 13600, training accuracy 1
+step 13700, training accuracy 1
+step 13800, training accuracy 1
+step 13900, training accuracy 1
+step 14000, training accuracy 1
+test accuracy 0.917242
+step 14100, training accuracy 1
+step 14200, training accuracy 1
+step 14300, training accuracy 1
+step 14400, training accuracy 1
+step 14500, training accuracy 1
+step 14600, training accuracy 1
+step 14700, training accuracy 1
+step 14800, training accuracy 0.99
+step 14900, training accuracy 1
+step 15000, training accuracy 1
+test accuracy 0.917471
+step 15100, training accuracy 1
+step 15200, training accuracy 0.99
+step 15300, training accuracy 1
+step 15400, training accuracy 1
+step 15500, training accuracy 0.99
+step 15600, training accuracy 1
+step 15700, training accuracy 1
+step 15800, training accuracy 1
+step 15900, training accuracy 1
+step 16000, training accuracy 0.99
+test accuracy 0.916322
+step 16100, training accuracy 1
+step 16200, training accuracy 1
+step 16300, training accuracy 1
+step 16400, training accuracy 1
+step 16500, training accuracy 1
+step 16600, training accuracy 1
+step 16700, training accuracy 1
+step 16800, training accuracy 1
+step 16900, training accuracy 1
+step 17000, training accuracy 1
+test accuracy 0.913563
+step 17100, training accuracy 1
+step 17200, training accuracy 1
+step 17300, training accuracy 1
+step 17400, training accuracy 1
+step 17500, training accuracy 1
+step 17600, training accuracy 1
+step 17700, training accuracy 1
+step 17800, training accuracy 1
+step 17900, training accuracy 1
+step 18000, training accuracy 1
+test accuracy 0.914713
+step 18100, training accuracy 1
+step 18200, training accuracy 1
+step 18300, training accuracy 1
+step 18400, training accuracy 1
+step 18500, training accuracy 1
+step 18600, training accuracy 1
+step 18700, training accuracy 1
+step 18800, training accuracy 1
+step 18900, training accuracy 1
+step 19000, training accuracy 1
+test accuracy 0.925287
+step 19100, training accuracy 1
+step 19200, training accuracy 1
+step 19300, training accuracy 1
+step 19400, training accuracy 1
+step 19500, training accuracy 0.99
+step 19600, training accuracy 1
+step 19700, training accuracy 1
+step 19800, training accuracy 1
+step 19900, training accuracy 1
+step 20000, training accuracy 1
+test accuracy 0.917471
+step 20100, training accuracy 1
+step 20200, training accuracy 1
+step 20300, training accuracy 1
+step 20400, training accuracy 1
+step 20500, training accuracy 1
+step 20600, training accuracy 1
+step 20700, training accuracy 1
+step 20800, training accuracy 1
+step 20900, training accuracy 1
+step 21000, training accuracy 1
+test accuracy 0.924828
+step 21100, training accuracy 1
+step 21200, training accuracy 1
+step 21300, training accuracy 1
+step 21400, training accuracy 0.99
+step 21500, training accuracy 1
+step 21600, training accuracy 1
+step 21700, training accuracy 1
+step 21800, training accuracy 1
+step 21900, training accuracy 1
+step 22000, training accuracy 1
+test accuracy 0.913563
+step 22100, training accuracy 0.99
+step 22200, training accuracy 1
+step 22300, training accuracy 1
+step 22400, training accuracy 1
+step 22500, training accuracy 1
+step 22600, training accuracy 1
+step 22700, training accuracy 1
+step 22800, training accuracy 1
+step 22900, training accuracy 1
+step 23000, training accuracy 1
+test accuracy 0.924138
+step 23100, training accuracy 1
+step 23200, training accuracy 1
+step 23300, training accuracy 1
+step 23400, training accuracy 1
+step 23500, training accuracy 1
+step 23600, training accuracy 1
+step 23700, training accuracy 1
+step 23800, training accuracy 1
+step 23900, training accuracy 1
+step 24000, training accuracy 1
+test accuracy 0.91954
+step 24100, training accuracy 1
+step 24200, training accuracy 1
+step 24300, training accuracy 0.99
+step 24400, training accuracy 1
+step 24500, training accuracy 1
+step 24600, training accuracy 1
+step 24700, training accuracy 1
+step 24800, training accuracy 1
+step 24900, training accuracy 1
+step 25000, training accuracy 1
+test accuracy 0.928736
+step 25100, training accuracy 1
+step 25200, training accuracy 1
+step 25300, training accuracy 1
+step 25400, training accuracy 1
+step 25500, training accuracy 1
+step 25600, training accuracy 1
+step 25700, training accuracy 1
+step 25800, training accuracy 1
+step 25900, training accuracy 1
+step 26000, training accuracy 1
+test accuracy 0.928046
+step 26100, training accuracy 1
+step 26200, training accuracy 1
+step 26300, training accuracy 1
+step 26400, training accuracy 1
+step 26500, training accuracy 1
+step 26600, training accuracy 1
+step 26700, training accuracy 1
+step 26800, training accuracy 1
+step 26900, training accuracy 1
+step 27000, training accuracy 1
+test accuracy 0.922069
+step 27100, training accuracy 1
+step 27200, training accuracy 1
+step 27300, training accuracy 1
+step 27400, training accuracy 1
+step 27500, training accuracy 1
+step 27600, training accuracy 1
+step 27700, training accuracy 1
+step 27800, training accuracy 0.99
+step 27900, training accuracy 1
+step 28000, training accuracy 1
+test accuracy 0.925747
+step 28100, training accuracy 1
+step 28200, training accuracy 1
+step 28300, training accuracy 1
+step 28400, training accuracy 1
+step 28500, training accuracy 1
+step 28600, training accuracy 1
+step 28700, training accuracy 1
+step 28800, training accuracy 1
+step 28900, training accuracy 1
+step 29000, training accuracy 1
+test accuracy 0.926667
+step 29100, training accuracy 1
+step 29200, training accuracy 1
+step 29300, training accuracy 1
+step 29400, training accuracy 1
+step 29500, training accuracy 1
+step 29600, training accuracy 1
+step 29700, training accuracy 1
+step 29800, training accuracy 1
+step 29900, training accuracy 1
+step 30000, training accuracy 1
+test accuracy 0.930345
+step 30100, training accuracy 1
+step 30200, training accuracy 1
+step 30300, training accuracy 1
+step 30400, training accuracy 1
+step 30500, training accuracy 1
+step 30600, training accuracy 1
+step 30700, training accuracy 1
+step 30800, training accuracy 1
+step 30900, training accuracy 1
+step 31000, training accuracy 1
+test accuracy 0.935173
+step 31100, training accuracy 1
+step 31200, training accuracy 1
+step 31300, training accuracy 1
+step 31400, training accuracy 1
+step 31500, training accuracy 1
+step 31600, training accuracy 1
+step 31700, training accuracy 1
+step 31800, training accuracy 1
+step 31900, training accuracy 1
+step 32000, training accuracy 1
+test accuracy 0.926897
+step 32100, training accuracy 1
+step 32200, training accuracy 1
+step 32300, training accuracy 1
+step 32400, training accuracy 0.99
+step 32500, training accuracy 1
+step 32600, training accuracy 1
+step 32700, training accuracy 1
+step 32800, training accuracy 1
+step 32900, training accuracy 1
+step 33000, training accuracy 1
+test accuracy 0.928736
+step 33100, training accuracy 1
+step 33200, training accuracy 1
+step 33300, training accuracy 1
+step 33400, training accuracy 1
+step 33500, training accuracy 1
+step 33600, training accuracy 1
+step 33700, training accuracy 1
+step 33800, training accuracy 1
+step 33900, training accuracy 1
+step 34000, training accuracy 1
+test accuracy 0.928276
+step 34100, training accuracy 1
+step 34200, training accuracy 1
+step 34300, training accuracy 1
+step 34400, training accuracy 1
+step 34500, training accuracy 0.99
+step 34600, training accuracy 1
+step 34700, training accuracy 1
+step 34800, training accuracy 1
+step 34900, training accuracy 1
+step 35000, training accuracy 1
+test accuracy 0.927586
+step 35100, training accuracy 1
+step 35200, training accuracy 1
+step 35300, training accuracy 1
+step 35400, training accuracy 1
+step 35500, training accuracy 1
+step 35600, training accuracy 0.99
+step 35700, training accuracy 1
+step 35800, training accuracy 1
+step 35900, training accuracy 1
+step 36000, training accuracy 1
+test accuracy 0.925517
+step 36100, training accuracy 1
+step 36200, training accuracy 1
+step 36300, training accuracy 1
+step 36400, training accuracy 1
+step 36500, training accuracy 1
+step 36600, training accuracy 1
+step 36700, training accuracy 1
+step 36800, training accuracy 1
+step 36900, training accuracy 1
+step 37000, training accuracy 1
+test accuracy 0.926437
+step 37100, training accuracy 1
+step 37200, training accuracy 1
+step 37300, training accuracy 1
+step 37400, training accuracy 1
+step 37500, training accuracy 1
+step 37600, training accuracy 1
+step 37700, training accuracy 1
+step 37800, training accuracy 1
+step 37900, training accuracy 1
+step 38000, training accuracy 1
+test accuracy 0.930115
+step 38100, training accuracy 1
+step 38200, training accuracy 1
+step 38300, training accuracy 1
+step 38400, training accuracy 1
+step 38500, training accuracy 1
+step 38600, training accuracy 1
+step 38700, training accuracy 1
+step 38800, training accuracy 1
+step 38900, training accuracy 1
+step 39000, training accuracy 1
+test accuracy 0.930575
+step 39100, training accuracy 1
+step 39200, training accuracy 0.99
+step 39300, training accuracy 1
+step 39400, training accuracy 1
+step 39500, training accuracy 1
+step 39600, training accuracy 1
+step 39700, training accuracy 1
+step 39800, training accuracy 1
+step 39900, training accuracy 1
+step 40000, training accuracy 1
+test accuracy 0.936322
+step 40100, training accuracy 0.99
+step 40200, training accuracy 1
+step 40300, training accuracy 1
+step 40400, training accuracy 1
+step 40500, training accuracy 1
+step 40600, training accuracy 1
+step 40700, training accuracy 1
+step 40800, training accuracy 1
+step 40900, training accuracy 1
+step 41000, training accuracy 1
+test accuracy 0.927816
+step 41100, training accuracy 1
+step 41200, training accuracy 1
+step 41300, training accuracy 1
+step 41400, training accuracy 1
+step 41500, training accuracy 1
+step 41600, training accuracy 1
+step 41700, training accuracy 1
+step 41800, training accuracy 1
+step 41900, training accuracy 1
+step 42000, training accuracy 1
+test accuracy 0.928736
+step 42100, training accuracy 1
+step 42200, training accuracy 0.99
+step 42300, training accuracy 1
+step 42400, training accuracy 1
+step 42500, training accuracy 1
+step 42600, training accuracy 1
+step 42700, training accuracy 1
+step 42800, training accuracy 1
+step 42900, training accuracy 1
+step 43000, training accuracy 1
+test accuracy 0.934943
+step 43100, training accuracy 1
+step 43200, training accuracy 1
+step 43300, training accuracy 1
+step 43400, training accuracy 1
+step 43500, training accuracy 1
+step 43600, training accuracy 1
+step 43700, training accuracy 1
+step 43800, training accuracy 1
+step 43900, training accuracy 1
+step 44000, training accuracy 1
+test accuracy 0.91954
+step 44100, training accuracy 1
+step 44200, training accuracy 1
+step 44300, training accuracy 1
+step 44400, training accuracy 1
+step 44500, training accuracy 1
+step 44600, training accuracy 1
+step 44700, training accuracy 1
+step 44800, training accuracy 1
+step 44900, training accuracy 1
+step 45000, training accuracy 1
+test accuracy 0.931494
+step 45100, training accuracy 1
+step 45200, training accuracy 1
+step 45300, training accuracy 1
+step 45400, training accuracy 1
+step 45500, training accuracy 1
+step 45600, training accuracy 1
+step 45700, training accuracy 1
+step 45800, training accuracy 1
+step 45900, training accuracy 1
+step 46000, training accuracy 1
+test accuracy 0.934253
+step 46100, training accuracy 1
+step 46200, training accuracy 1
+step 46300, training accuracy 1
+step 46400, training accuracy 1
+step 46500, training accuracy 1
+step 46600, training accuracy 1
+step 46700, training accuracy 1
+step 46800, training accuracy 1
+step 46900, training accuracy 1
+step 47000, training accuracy 1
+test accuracy 0.94092
+step 47100, training accuracy 1
+step 47200, training accuracy 1
+step 47300, training accuracy 1
+step 47400, training accuracy 1
+step 47500, training accuracy 1
+step 47600, training accuracy 1
+step 47700, training accuracy 1
+step 47800, training accuracy 1
+step 47900, training accuracy 1
+step 48000, training accuracy 1
+test accuracy 0.925977
+step 48100, training accuracy 1
+step 48200, training accuracy 1
+step 48300, training accuracy 1
+step 48400, training accuracy 1
+step 48500, training accuracy 1
+step 48600, training accuracy 1
+step 48700, training accuracy 1
+step 48800, training accuracy 1
+step 48900, training accuracy 1
+step 49000, training accuracy 1
+test accuracy 0.936552
+step 49100, training accuracy 1
+step 49200, training accuracy 1
+step 49300, training accuracy 1
+step 49400, training accuracy 1
+step 49500, training accuracy 1
+step 49600, training accuracy 1
+step 49700, training accuracy 1
+step 49800, training accuracy 1
+step 49900, training accuracy 1
+Final test accuracy 0.94

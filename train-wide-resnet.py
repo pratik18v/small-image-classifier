@@ -60,10 +60,10 @@ def wide_resnet(x, n=2, k=1):
     # average pooling
     avg_pool = tf.nn.avg_pool(bn_post_relu, ksize=[1, 8, 8, 1], strides=[1, 1, 1, 1], padding='SAME')
 
-    W_fc = weight_variable([8 * 8 * 64, 3])
+    W_fc = weight_variable([8 * 8 * 64 * k, 3])
     b_fc = bias_variable([3])
 
-    avg_pool_flat = tf.reshape(avg_pool, [-1, 8 * 8 * 64])
+    avg_pool_flat = tf.reshape(avg_pool, [-1, 8 * 8 * 64 * k])
     h_fc = tf.matmul(avg_pool_flat, W_fc) + b_fc
 
     return h_fc, keep_prob
