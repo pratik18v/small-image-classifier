@@ -25,6 +25,8 @@ The new dataset has the following number of images:
 
 Total number of images are 17400.
 
+The number of images required to build a robust classifier is a function of the complexity of the model we're trying to train. The more complex the model (i.e., the more parameters it learns), the more data it requires. For example, a simple classifier like SVM will require less data to perform good enough as comapred to a multi-layered CNN.
+
 ## Models
 I have experimented with the following models:
 
@@ -132,3 +134,13 @@ Test accuracy: 80%
     <td><b>95.36</b></td>
   </tr>
 </table>
+
+## Further Improvements
+We can improve the performance further by using transfer learning in the following 2 ways - 
+* Cut-off the final layer of a model pre-trainned on similar kind of classes. Attach a new softmax layer for our 3 classes and start training this new model on our data. This is called fine-tuning.
+
+* Pass the images through a pre-trainned model and extract features from the second-last layer. Use these features with some other classifier like SVM or xgboost (boosting with decision trees). In case of xgboost we will have to train 3 one-vs-all classifiers and take a weighted combination of their outputs at the time of testing.
+
+With both the above methods we can train a very good performance classifier using relatively less amount of data and much faster as well.
+
+We can also experiment with ensemble networks to see if the performance can be improved.
