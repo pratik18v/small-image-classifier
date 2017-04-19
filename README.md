@@ -56,6 +56,7 @@ Test accuracy: 80%
     <th>N/w Width (k)</th>
     <th>Units per block (n)</th>
     <th>Learning Rate </th>
+    <th>Batch Size</th>
     <th>Iterations</th>
     <th>Dropout Prob</th>
     <th>Test Acc (%)</th>
@@ -65,6 +66,7 @@ Test accuracy: 80%
     <td>1</td>
     <td>2</td>
     <td>0.01</td>
+    <td>100</td>
     <td>50,000</td>
     <td>0.5</td>
     <td>90</td>
@@ -74,6 +76,7 @@ Test accuracy: 80%
     <td>1</td>
     <td>3</td>
     <td>0.01</td>
+    <td>100</td>
     <td>50,000</td>
     <td>0.5</td>
     <td>93</td>
@@ -83,6 +86,7 @@ Test accuracy: 80%
     <td>2</td>
     <td>2</td>
     <td>0.01</td>
+    <td>100</td>
     <td>50,000</td>
     <td>0.5</td>
     <td>94</td>
@@ -92,17 +96,29 @@ Test accuracy: 80%
     <td>2</td>
     <td>3</td>
     <td>0.01</td>
+    <td>100</td>
     <td>50,000</td>
     <td>0.5</td>
     <td>93.8</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>2</td>
+    <td>2</td>
+    <td>0.01</td>
+    <td>100</td>
+    <td>50,000</td>
+    <td>0.3</td>
+    <td>94.2</td>
   </tr>
     <tr>
     <td>5</td>
     <td>2</td>
     <td>2</td>
     <td>0.01</td>
+    <td>200</td>
     <td>50,000</td>
     <td>0.3</td>
-    <td><b>94.2</b></td>
+    <td><b>94.8</b></td>
   </tr>
 </table>
