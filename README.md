@@ -97,7 +97,7 @@ Test accuracy: 80%
     <td>93.8</td>
   </tr>
     <tr>
-    <td>4</td>
+    <td>5</td>
     <td>2</td>
     <td>2</td>
     <td>0.01</td>
