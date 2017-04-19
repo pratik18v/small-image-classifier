@@ -111,14 +111,24 @@ Test accuracy: 80%
     <td>0.3</td>
     <td>94.2</td>
   </tr>
-    <tr>
-    <td>5</td>
+   <tr>
+    <td>6</td>
     <td>2</td>
     <td>2</td>
     <td>0.01</td>
     <td>200</td>
     <td>50,000</td>
     <td>0.3</td>
-    <td><b>94.8</b></td>
+    <td>94.8</td>
+  </tr>
+   <tr>
+    <td>7</td>
+    <td>2</td>
+    <td>3</td>
+    <td>0.01</td>
+    <td>200</td>
+    <td>50,000</td>
+    <td>0.3</td>
+    <td><b>95.36</b></td>
   </tr>
 </table>
