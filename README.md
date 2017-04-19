@@ -85,7 +85,7 @@ Test accuracy: 80%
     <td>0.01</td>
     <td>50,000</td>
     <td>0.5</td>
-    <td><b>94</b></td>
+    <td>94</td>
   </tr>  
   <tr>
     <td>4</td>
@@ -95,5 +95,14 @@ Test accuracy: 80%
     <td>50,000</td>
     <td>0.5</td>
     <td>93.8</td>
+  </tr>
+    <tr>
+    <td>4</td>
+    <td>2</td>
+    <td>2</td>
+    <td>0.01</td>
+    <td>50,000</td>
+    <td>0.3</td>
+    <td><b>94.2</b></td>
   </tr>
 </table>
