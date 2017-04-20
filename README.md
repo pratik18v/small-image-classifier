@@ -131,7 +131,17 @@ Test accuracy: 80%
     <td>200</td>
     <td>50,000</td>
     <td>0.3</td>
-    <td><b>95.36</b></td>
+    <td>95.36</td>
+  </tr>
+    <tr>
+    <td>8</td>
+    <td>3</td>
+    <td>3</td>
+    <td>0.01</td>
+    <td>200</td>
+    <td>100,000</td>
+    <td>0.3</td>
+    <td><b>95.90</b></td>
   </tr>
 </table>
 
